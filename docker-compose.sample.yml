@@ -1,0 +1,29 @@
+networks:
+  traefik_proxy:
+    external: true
+  redis_redis:
+    external: true
+
+services:
+  private-message:
+    container_name: private-message
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - 'TZ=Europe/Paris'
+    expose:
+      - "3000"
+    networks:
+      - traefik_proxy
+      - redis_redis
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.docker.network=traefik'
+      - 'traefik.http.routers.privatemessage.entrypoints=websecure'
+      - 'traefik.http.routers.privatemessage.middlewares=hsts-headers@file'
+      - 'traefik.http.routers.privatemessage.rule=Host(`monsite.com`,`www.monsite.com`)'
+      - 'traefik.http.routers.privatemessage.tls.certresolver=lets-encrypt'
+      - 'traefik.http.routers.privatemessage.tls.options=mintls12@file'
+      - 'traefik.http.services.privatemessage.loadbalancer.server.port=3000'
+

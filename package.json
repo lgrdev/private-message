@@ -1,0 +1,45 @@
+{
+  "name": "private-message",
+  "version": "1.0.0",
+  "description": "Génération de lien pour visualiser un message privé à durée terminée",
+  "author": {
+    "name": "Laurent Glesner",
+    "email": "admin@lgrdev.ovh",
+    "url": "https://lgrdev.ovh/"
+  },
+  "homepage": "https://github.com/lgrdev/private-message#readme",
+  "license": "MIT",
+  "keywords": [
+    "private",
+    "message",
+    "nuxt",
+    "vue"
+    "redis"
+    ],
+  "bugs": {
+    "url": "https://github.com/lgrdev/private-message/issues",
+    "email": "admin@lgrdev.ovh"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "ioredis": "^5.4.1",
+    "nuxt": "^3.13.0",
+    "nuxt-security": "^2.0.0-rc.9",
+    "uuid": "^10.0.0",
+    "vue": "^3.5.4",
+    "vue-router": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/uuid": "^10.0.0"
+  }
+}
