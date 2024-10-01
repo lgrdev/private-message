@@ -4,7 +4,7 @@
   "description": "Génération de lien pour visualiser un message privé à durée terminée",
   "author": {
     "name": "Laurent Glesner",
-    "email": "admin@lgrdev.ovh",
+    "email": "lgrdev@lgrdev.ovh",
     "url": "https://lgrdev.ovh/"
   },
   "homepage": "https://github.com/lgrdev/private-message#readme",
@@ -13,12 +13,12 @@
     "private",
     "message",
     "nuxt",
-    "vue"
+    "vue",
     "redis"
     ],
   "bugs": {
     "url": "https://github.com/lgrdev/private-message/issues",
-    "email": "admin@lgrdev.ovh"
+    "email": "lgrdev@lgrdev.ovh"
   },
   "private": true,
   "type": "module",
